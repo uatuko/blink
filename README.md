@@ -10,6 +10,6 @@ This repository is a fork of the blink-cocoa darcs repository (from version 3.3.
 in an attempt to create a free OSX binary.
 
 Please refer to http://icanblink.com/ if you are looking for the version maintained
-by the author(s).
+by the original author(s).
 
 
