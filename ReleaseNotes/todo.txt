@@ -1,0 +1,8 @@
+Main tasks
+----------
+
+- Video
+- RTP timeout
+- AGC
+- Pause/Resume File Transfer
+- Add bandwidth throttling for File Transfers

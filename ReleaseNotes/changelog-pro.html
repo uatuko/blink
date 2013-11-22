@@ -1,0 +1,979 @@
+<html>
+<head>
+<title>Blink Pro Changelog</title>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+
+<body>
+
+<h2>Version 3.3.0</h2>
+
+<p>October 6th, 2013
+
+<ul>
+<li>Added OTR protocol for end-to-end private Chat conversations
+<li>Added SMP protocol for verifying remote fingerprints for private Chat conversations
+<li>Added per Contact/Session storage option for private Chat conversations
+<li>Added a safety timer for Music application muting when they fail
+<li>Mark pending outgoing Chat messages as failed if the DNS lookup fails
+<li>Mark privacy for each Chat messages using a coloured lock
+<li>Added option to purge Logs saved to files in Preferences
+<li>Allow starting Audio call from Chat window
+<li>Honor remote preference for not logging Chat to local history database
+<li>End Session when reinvite fails for last stream
+<li>Refactored toggling visibility of Collaborative editor
+<li>Don'r render system message when cancelling Chat session
+<li>Show loading indicator in chat view when connecting session
+<li>Don't duplicate system Chat message when a chat stream fails
+<li>Fixed marking failed Chat messages
+<li>Fixed startup if default Account is None
+<li>Fixed reusing Audio tile after one SIP route fails
+<li>Use white font for failed Chat messages
+<li>Fixed display of packet loss in Audio tile
+<li>Fixed DNS lookup blockiness
+<li>Fixed crash when in-dialog request fails to be sent within a subscription
+<li>Fixed memory leak by initializing the handler after the stream initialized
+<li>Properly handle mutex creation failures
+</ul>
+
+
+<h2>Version 3.2.0</h2>
+
+<p>August 23th, 2013
+
+<ul>
+<li>Added pause music setting in Audio preferences
+<li>Fixed reusing Chat sessions in same window
+<li>Fixed position of Call transfer contextual menu
+<li>Fixed detecting when Music has been paused
+<li>Fixed handling errors in remove_stream
+<li>Improved Chat connection messages
+<li>Improved performance of LDAP queries
+<li>Improved performace of loading System Address Book
+<li>Handle System Address Book changes incrementally
+<li>Don't set a default DTMF delimiter to #
+<li>Use single global c line when creating SDP
+<li>Relax Opus codec matching when doing SDP negotiation
+<li>Always put useinbandfec in SDP for Opus codec
+</ul>
+
+
+<h2>Version 3.1.1</h2>
+
+<p>August 5th, 2013
+
+<ul>
+<li>Reload model after deleting policy entry
+<li>Fixed calling logging function
+<li>Skip connecting to chat replication server if chat replication password not set
+<li>Don't add chat to replication journal if chat replication password not set
+<li>Handle hanging ringing sessions with a clean up timer
+<li>Auto select authorized account for session to XMPP contacts
+<li>Increase GUI responsivness when session ends
+<li>Don't try publish after application ended
+<li>Fetch last 10 entries in history menu
+<li>Don't refresh history menu after every call
+<li>Hide end chat delimiter when replaying Chat history
+<li>Don't print chat session delimiters when replaying SMS history
+<li>Disable history scolling for Bonjour accounts
+<li>Update history menu section titles
+</ul>
+
+
+<h2>Version 3.1.0</h2>
+
+<p>August 5th, 2013
+
+<ul>
+<li>Added elastic scrollback in time for Chat sessions
+<li>Added elastic scrollback in time for SMS sessions
+<li>Added search text capability within Chat and SMS sessions
+<li>Added setting to enable the Answering Machine in alert panel
+<li>Load history messages from all uris belonging to a contact
+<li>Don't log duplicate database entries error
+<li>Change background colors of failed chat messages
+<li>Log chat errors through its associated session controller
+<li>Fixed sending pending messages after connecting chat stream
+<li>Send own icon only for Bonjour chat
+<li>Improved navigation of history entries by date
+<li>Fixed removing outgoing ringtone when using failure route
+<li>Fixed removing on_hold ringtones for failed sessions
+<li>Fixed initialisation of collaboration editor and display
+<li>Fixed selecting missed calls entries
+<li>Render voice messages recorded by answering machine in contact contextual menu
+<li>Renamed Voicemail to Answering Machine
+<li>Reload only the last ten file transfers by default
+<li>Reworked mute music applications using official Scripting Bridge API
+<li>Use night volume settings for speech synthesizer
+<li>Don't auto open chat window at startup for replicated messages
+<li>Fixed crash on SMS window dealloc
+</ul>
+
+
+<h2>Version 3.0.0</h2>
+
+<p>July 26th, 2013
+
+<ul>
+<li>Added audio ultra-wideband support for 32 kHz and 48kHz sample rates
+<li>Added Acoustic Echo Cancellation for 32kHz sample rate
+<li>Added Automatic Gain Control for microphone input
+<li>Added OPUS codec at 32kHz with AEC enabled and 48kHz with AEC disabled
+<li>Added 32kHz and removed 8kHz sample rate for Speex codec
+<li>Added Chat privacy setting to avoid logging messages to history
+<li>Added icons to History menu items
+<li>Added availability notifications for Mountain Lion or newer OSX versions
+<li>Added option to start multiparty Conference when all participants are available
+<li>Added last calls submenu to Contact contextual menu
+<li>Added speech synthesis menu item to tell when a Contact becomes available
+<li>Moved Availability indicator on the right side of the contacts
+<li>Added hide/show option for menu items of History Groups and History Contacts
+<li>Added contextual Group menu items for selection of the history period
+<li>Added special groups toggle in main interface bottom left contacts button
+<li>Added per contact setting to start both audio and chat 
+<li>Added add/remove Chat to audio session tile
+<li>Remove contacts from Missed Call Group after succeesful calls
+<li>Fixed automatic hangup on RTP timeout per account
+<li>Fixed getting daily entries in history viewer when using aliases
+<li>Don't filter by media type when opening history viewer for a contact 
+<li>Fixed Presence handling bugs
+<li>Fixed high CPU usage when many contacts get presence updates
+<li>Fixed Call Hold to stop streaming
+<li>Fixed hogging the GUI when re-loading file transfer history
+<li>Fixed number of missed calls for Contacts in Missed Calls Group
+<li>Fixed a random crash when Screen Sharing session ends
+<li>Fixed initializing smileys theme
+<li>Fixed duplication of replicated SMS messages
+<li>Fixed fall back to alternative SIP routes
+<li>Beautify codec names in Preferences panel
+<li>Improved general logging
+<li>Improved performance of history database queries
+<li>Reduced startup and shutdown time
+<li>Reduced overall application memory usage
+<li>Finish session when click on disconnect Chat button
+<li>Removed jitter buffer from Session info panel
+<li>Replaced preferred media in contact editor with pop up button
+<li>Strip spaces from audio device name
+</ul>
+
+
+<p>June 11th, 2013
+
+<h2>Version 2.3.1</h2>
+
+<p>June 11th, 2013
+
+<ul>
+<li>Added compatibility with MacOSX Mavericks
+<li>Added notifications for MacOSX >=10.8
+<li>Added menu option to copy history contact uri to search bar
+<li>Fixed deleting source contact when merging
+<li>Fixed selecting None as audio device
+<li>Stop spinning wheel if authentication fails
+<li>Replace synthetic myself contact with handling new presence notification for myself
+<li>Bundle Python framework within Blink application
+</ul>
+
+
+<h2>Version 2.3.0</h2>
+
+<p>May 9th, 2013
+
+<ul>
+<li>Added microphone signal level meter in Audio Drawer
+<li>Added button in Alert Panel to send call directly to Answering Machine
+<li>Added real-time replication of MSRP chat sessions with SIP2SIP accounts
+<li>Added menu item in Contacts menu to show Pending Contact Requests
+<li>Added paste capability to active audio session for sending DTMF tones
+<li>Set default application filter to Sessions in SIP Logs window
+<li>Print ICE negotiation results in RTP Logs window
+<li>Display RTP latency and round trip time in audio tile and RTP Logs window
+<li>Fixed contact dragging exception when searching
+<li>Refresh history menu after session has been saved to history database
+<li>Save previously used audio devices before switching to new audio devices
+<li>Display actual used default devices in Alert Panel
+<li>Fixed selecting audio devices on OSX 10.8
+<li>Drop duplicated incoming SMS messages
+<li>Improved logging for SMS messages
+</ul>
+
+
+<h2>Version 2.2.0</h2>
+
+<p>March 25th, 2013
+
+<ul>
+<li>Added button to send call directly to voicemail
+<li>Added button to add call to existing conference
+<li>Added setting to enable on_the_phone automatic presence activity per account
+<li>Added audio recordings to contextul contact menu 
+<li>Added menu item to send email invitation to conference room
+<li>Added copy to clipboard conference menu item
+<li>Fixed overlapping auto-answer text label
+<li>Check if account is not None
+<li>Fixed overlapping variable name
+<li>Remove debug statements
+<li>Show Presence status section in Bonjour account
+<li>Capture exceptions for unknown setting types
+<li>Auto-close session if cannot remove audio stream
+<li>Publish offline note when invisible
+<li>Bounce dock icon once when chat message is received but Blink is not on the foreground
+<li>Only bounce the dock icon once for missed calls
+<li>Account for incoming calls answered by machine as missed calls
+<li>Optimize sending screen captures in multi-party conferences
+<li>Print a friendly status line for timeout 408
+<li>Disable PJSIP assertions on recoverable errors
+<li>Avoid doing mDNS lookups with dnspython
+</ul>
+
+
+<h2>Version 2.1.0</h2>
+
+<p>February 7th, 2013
+
+<ul>
+<li>Added Bonjour presence
+<li>Added global settings for extended debug
+<li>Fixed memory leaks in Bonjour discovery
+<li>Fixed memory leaks in Presence Subscriptions
+<li>Fixes in handling Conference info payloads
+<li>Fixed deadlock when cross instantiating conditional singletons
+<li>Fixed login compatibility with sip2sip.info new model
+<li>Fixed setting referenced presence contact for conference contacts
+<li>Improved History replication logs
+<li>Strip sip: from Bonjour contacts
+<li>Log all SIP applications by default in Logs window
+<li>Improve logging of add/remove conference participants
+<li>Handle remote icon different if remote is a focus
+<li>Improved new contact request menu
+<li>Closed chat tab instead of window on Cmd-w
+<li>Removed extra checks on SDP origin field (increases audio compatibility
+    with broken SBCs)
+</ul>
+
+
+<h2>Version 2.0.3</h2>
+                                  
+<p>January 23rd, 2013
+
+<ul>
+<li>Added setting to reject audio calls for unauthorized contacts
+<li>Added add contact menu item to groups
+<li>Added move group to contacts list group textual menu
+<li>Fixed bugs in File Transfer window
+<li>Fixed session transfer after SDK API changes
+<li>Fixed released of video device resources in Photo picker
+<li>Update preferences window title with section name
+<li>Fixes when selected audio device is None
+<li>Renamed Messages to Instant Messages
+<li>Reject incoming sessions from blocked contacts
+<li>Enable contact contextual session menu items based on discovered capabilities    
+<li>Auto-select account for which we have been authorized if contact has presence
+<li>Fixed allow drop file on top of syntetic search contact 
+<li>Allow selection of uri when droping file on contacts
+<li>Fixed exception when droping ldap contact on top of other
+<li>Enable re-invites based on discovered capabilities
+<li>Enable contact contextual session menu items based on discovered capabilities
+<li>Check if uri is valid before inviting to conference
+<li>Fixed logging presence watchers
+<li>Display account used for subscription in log line
+<li>Added setting to disable session type based on using availability
+<li>Auto-select account for which we have been authorized if contact has presence
+</ul>
+
+
+<h2>Version 2.0.2</h2>
+
+<p>January 11th, 2013
+
+<ul>
+<li>Added Presence compatibility with SIP2SIP service
+<li>Fixed availability publisher bugs
+<li>Fixed overwriting icon from XCAP
+<li>Fixed Hold behaviour in some corner cases
+<li>Fixed setting icon in contextual menu
+<li>Log ICE negotiation failure reason
+<li>Fixed migrating contacts from old contacts model
+<li>Load virtual groups first thing in SIPApplicationWillStart
+<li>Use digits only for contact usernames to improve interoperability
+<li>Search organization for system AB contacts
+<li>Internal refactoring of Enrollment window
+<li>Replace Merge contacts alert panel with a new window
+<li>Don't sent multiple growl notifications for new watchers
+</ul>
+
+
+<h2>Version 2.0.1</h2>
+
+<p>December 28th, 2012
+
+<ul>
+<li>Added synchronization of availability when using multiple devices
+<li>Added support for HTTP urls in contact storage and availability updates
+<li>Added availability idle_threshold settings 
+<li>Made improvements to the History browser
+<li>Added logging for Contacts availability to History
+<li>Added a separate icon for the synthetic Contact in the search results
+<li>Added filter SIP trace by application in Debug window
+<li>Fixed check if the Chat window is alive
+<li>Fixed processing remote icon if Contact is destroyed in the meanwhile
+<li>Fixed a test for supported audio codecs
+<li>Fixed checking uri types for Contacts
+<li>Fixed accepting a session if it was already cancelled
+<li>Do not allow edit of display name in the main window
+<li>Updated several GUI tooltips
+<li>Replaced Chat window history icon
+<li>Disable unused NAT type detection queries
+<li>Correlate alert panel actions with their corresponding sessions
+<li>Don't allow dial of anonymous uri from history viewer
+<li>Clean up URIs received from history server call detail records
+<li>Use digits only for contact usernames to improve interoperability
+<li>Search organization for system AB contacts
+<li>Internal refactoring of Enrollment window
+</ul>
+
+
+<h2>Version 2.0.0</h2>
+
+<p>November 27th, 2012
+
+<ul>
+<li>Added Presence support (PUBLISH and SUBSCRIBE/NOTIFY methods using RLS)
+    Detailed info available at http://projects.ag-projects.com/news/15
+<li>Added Address Book storage using XCAP rls-services and resource-lists
+<li>Added Presence Policy using XCAP org.openmobilealliance.pres-rules
+<li>Added Icon Storage using XCAP org.openmobilealliance.pres-content
+<li>Added Offline Presence using XCAP pidf-manipulation
+<li>Added XMPP interoperability for SIP2SIP accounts
+<li>Added publish for Status, Icon, Activity, Note, Timezone, User-Input and Media Caps
+<li>Added Presence Info Panel and render SIP devices on a world map
+<li>Added menu to select a particular uri when dragging contact to create conference
+<li>Added menu to select a particular uri when dragging contact to conference drawer
+<li>Added possibility to start sessions to specific devices (using GRUU)
+<li>Added view history menu item to History contacts
+<li>Added move conference to server functionality
+<li>Added back cmd-D shortcut key for Show dialpad
+<li>Added Blink system bar menu
+<li>Added a new multi-user avatar for messages originating from a conference focus
+<li>Added hint for how to use own Internet domain for a SIP account
+<li>Added GUI subsection in Account advanced section
+<li>Added custom label for account popup menu in GUI subsection
+<li>Fixed passing curently selected group to the Add Contact dialog
+<li>Fixed crash when enrollment for SIP2SIP account fails
+<li>Fixed validating Contacts backups
+<li>Fixed processing HTTP links with unicode characters
+<li>Fixed setting local hold state after direction was inactive
+<li>Fixed selecting audio device menu items in Mountain Lion
+<li>Fixed selecting built-in devices in Mountain Lion
+<li>Fixed setting display name and icon for invited participants in chat drawer
+<li>Fixed bug that triggered high CPU usage in case of poor connectivity conditions
+<li>Fixed several multi-threading issues in the middleware
+<li>Fixed Chat window toolbar menu items to work on retina displays
+<li>Fixed updating Chat window drawer when removing audio streams
+<li>Fixed check if audio input device is not None
+<li>Fixed chat message replication with history server
+<li>Fixed sharing contact widgets across groups
+<li>Fixed calling API functions on Snow Leopard
+<li>Fixed race conditions when deleting an account
+<li>Improved copy of SIP URI from Contacts
+<li>Improved layout of icons in chat window tab switcher
+<li>Improved chat connectivity failure logs
+<li>Improved title of alert panel depending on proposed media type
+<li>Improved re-usage of streams for chat sessions
+<li>Terminate session if a stream fails and can't be removed from the session
+<li>Activate Add contact button in Contact window if at least one uri is set
+<li>Print the reason when the configuration file is corrupted
+<li>Speak different text for incoming file transfer
+<li>Do not allow calling an anonymous SIP URI in History contacts
+<li>Avoid saving contact avatar multiple times
+<li>Simplify session starting wrappers
+<li>Log chat replication activity
+<li>Active app before showing presence info panel
+<li>Avoid saving default user icon for each contact
+<li>Do not print registration error in account popup if account register is false
+<li>Disable redial menu item if no redial uri available
+<li>Focus search box when typing while contact is selected
+</ul>      
+
+
+<h2>Version 1.9.0</h2>
+
+<p>July 23rd, 2012
+
+<ul>
+<li>Refactored Contacts Management. For more information see
+    http://projects.ag-projects.com/news/9
+<li>Added chat messages replication with sip2sip.info service
+<li>Added window menu entry to open Chat conversations
+<li>Added nickname support for MSRP conferences
+<li>Added Cmd-F keyboard shortcut for search contact 
+<li>Fixed handling failed chat messages when connection drops
+<li>Fixed critical exceptions in the debug window
+<li>Fixed memory leaks in session and stream management
+<li>Fixed race conditions in subscription for conference-info
+<li>Fixed accounting of media type when chat session is cancelled
+<li>Fixed race conditions in account registrar and subscription handler
+<li>Fixed deleting history entries
+<li>Fixed SDP connection address when initial request contained 0.0.0.0
+<li>Re-mapped window keboard shortcuts
+<li>Implemented Sandboxing
+<li>Removed stopping audio applications functionality
+<li>Removed automatic configuration migration from previous Blink versions
+</ul>
+
+<h2>Version 1.8.3</h2>
+
+<p>June 4th, 2012
+
+<ul>
+<li>Added session history synchronization with sip2sip.info service
+<li>Lookup history menu entries in Contacts list
+<li>Fixed rendering and storage in history of chat text/html content type
+<li>Fixed refreshing chat drawer when session has ended
+<li>Fixed handling for Min-Expires header for REGISTER methods
+<li>Fixed handling for incoming INVITE with inactive audio offer
+<li>Fixed handling re-INVITEs with an empty body
+<li>Fixed displaying our own contact on Bonjour conferencing
+<li>Fixed discovery of Bonjour announced Conference servers
+<li>Fixed stopping outgoing ringtones in some situations
+<li>Fixed handling refresh interval from Min-Expires for SUBSCRIBE methods
+<li>Fixed parsing errors for SIP URIs
+<li>Fixed crash when the realm field is empty in authentication headers
+<li>Fixed memory leaks in Session Info panel
+<li>Fixed memory leaks in Chat Windows
+<li>Fixed memory leaks in Conference Panel 
+<li>Fixed History Manager to be more resilient to DB errors
+<li>Fixed encoding of cyrillic characters in history database
+<li>Fixed setting session failure reason on local transport error
+<li>Fixed selecting audio recording icon
+<li>Re-init Session Info panel when re-connect chat session
+<li>Moved web alert settings under a separate section
+<li>Improved display of SIP account in the account popup button
+<li>Changed default history search period to Last Week
+<li>Don't use latin1 encoding from the history database
+<li>Handle callto: URLs dialled from external applications
+<li>Handle Command-W shortut in Chat window to close the window
+<li>Do not play dtmf tones for digits typed in the Search box
+<li>Added Show Chat Window menu item in Window menu
+</ul>
+
+<h2>Version 1.8.2</h2>
+
+<p>May 3rd, 2012
+
+<ul>
+<li>Added AddressBook plugins for Phone, Email and URL fields
+<li>Fixed exception when logging a failed Call Transfer
+<li>Fixed setting Chat Window title when there is none to be set
+</ul>
+
+<h2>Version 1.8.1</h2>
+
+<p>April 20th, 2012
+
+<ul>
+<li>Terminate all Sessions when going to sleep
+<li>Improved printing of SIP Registration errors
+<li>Improved handling of ringtones when in Silent mode
+<li>Turn off speech synthesis when in Silent mode
+<li>Fixed a race-condition when adding or removing a Stream
+<li>Fixed opening the Web Alert Panel after connect
+<li>Prevent waking up the computer by Bonjour events
+<li>Hide unnecessary scrollbar in settings section view
+</ul>
+
+
+<h2>Version 1.8.0</h2>
+
+<p>April 5th, 2012
+
+<ul>
+<li>Added support for GRUU (RFC 5627)
+<li>Use GRUU contact for Call Transfer when available
+<li>Added general advanced GUI section
+<li>Added setting for when to display the Web Alert page
+<li>Added setting for the web browser used for alerts
+<li>Added account setting to specify the DTMF delimiter
+<li>Added typed text in Search Bar to the list of transfer destinations
+<li>Added caller_username to the web alert url
+<li>Fixed opening the Web Alert window
+<li>Fixed timestamp display in Chat sessions
+<li>Fixed Engine failure on bogus incoming REFER requests
+<li>Fix crash on RTCP decryption when using SRTP
+<li>Fixed some Subscribe method related exceptions
+<li>Print audio stream info in Debug Window also if added later
+</ul>
+
+<h2>Version 1.7.4</h2>
+
+<p>March 2nd, 2012
+
+<ul>
+<li>Enable Address Book by default
+</ul>
+
+
+<h2>Version 1.7.3</h2>
+
+<p>February 14th, 2012
+
+<ul>
+<li>Fixed syncing default TLS verify server global setting with accounts
+<li>Fixed handling IPv6 name servers
+<li>Fixed retransmissions of previously failed chat messages
+<li>Small layout changes to Session Info panel
+</ul>
+
+
+<h2>Version 1.7.2</h2>
+
+<p>February 6th, 2012
+
+<ul>
+<li>Added STUN servers settings to NAT traversal
+<li>Fixed XML parsing errors that caused high CPU load
+<li>Fixed reactivating Bonjour account after a TLS transport change
+<li>Fixed bug that prevented the software running on Snow Leopard
+<li>Show used local account in sesion info panel
+<li>Fixed searching for non-ASCII characters in contacts list
+</ul>
+
+
+<h2>Version 1.7.1</h2>
+
+<p>January 26th, 2012
+
+<ul>
+<li>Added selection of alternative SIP outbound proxies
+<li>Added start sessions with multiple media and participants from urls:
+    sip:user@example.com;participant=abcd@example.com;media=audio;media=chat
+<li>Improved iCloud synchronization logic
+<li>Fixed validating toolbar buttons in Chat window
+<li>Fixed stopping Screensharing when shared window is closed
+<li>Fixed removing a stream if a negative response was received
+<li>Fixed blocking of internal timers when menus are being displayed
+<li>Fixed checks for private Chat messages
+<li>Do not handle the same media stream type twice
+<li>Do not use the dial plan of disabled accounts
+<li>Reply with 200 OK to in-dialog OPTIONS requests
+</ul>
+
+
+<h2>Version 1.7.0</h2>
+
+<p>January 9th, 2012
+
+<ul>
+<li>Added iCloud support
+<li>Added support for droping files over audio sessions
+<li>Added do not disturb setting
+<li>Added pause/resume support for Spotify
+<li>Improved handling of desktop sharing negotiations
+<li>Close audio drawer when opening chat window
+<li>Fixed display of bonjour contact in drawer
+<li>Fixed lookup of bonjour contacts in contacts list
+<li>Allow conferencing of bonjour contacts with normal contacts
+<li>Avoid opening drawer if no audio session is active
+<li>Fixed handling of rejected and missed calls
+<li>Shut Blink down if a fatal error occurs in the Engine
+<li>Check for an attribute in sms viewer as the view is shared with chat
+<li>Open external links from account page in system web browser
+<li>Avoid printing chat ended message if stream failed
+<li>Fixed reacting to MediaStreamDidFail on ChatController
+<li>Don't start speech recognition if audio call is in progress
+<li>Use display name if found than tel number when format uri
+<li>Improve reason text when invite to conference fails
+<li>Say display name if found in alert panel
+<li>Fixed crash on overflow error
+<li>Fixed crash when bogus G722 payload is received
+<li>Fixed building sipfrag payloads
+<li>Fixed performing DNS lookups within a SIP transaction
+</ul>
+
+<h2>Version 1.6.0</h2>
+
+<p>December 23rd, 2011
+
+<ul>
+<li>Added Multiparty Screensharing
+<li>Added Keychain support for password storage
+<li>Added voice over support for blind people
+<li>Added speech recognition for Alert Panel commands
+<li>Added keep window on top functionality
+<li>Added custom labels in Address Book entries
+<li>Added auto-answer per contact
+<li>Say incoming caller name using speech syntezis
+<li>Added Voice Assistance Tools menu items
+<li>Refresh search when Address Book has changed
+<li>Allow * # and , for pause in post-dial DTMF
+<li>Do not render non-text messages in chat view
+<li>Fixed a memory leak in session info panel
+<li>Fixed a memory leak in chat window controller
+<li>Fixed a memory leak in audio controller
+<li>Fixed rejecting proposal when adding new stream
+<li>Fixed restoring volume to VLC player
+<li>Remove participants who did not join conference after 5s delay
+<li>Don't update codec info if call transfer is in progress
+<li>Consider 'unavailable' username as anonymous
+<li>Log calls answered elsewhere as completed
+<li>Refactored Logging window
+<li>Refactored Alert panel
+</ul>
+
+
+<h2>Version 1.5.0</h2>
+
+<p>November 28th, 2011
+
+<ul>
+<li>Added generic LDAP directory support per account
+<li>Added LDAP search integration with SIP2SIP service
+<li>Added automatic DTMF postdial functionality using # delimiter
+<li>Added automatic audio recording setting in advanced audio section
+<li>Added call waiting setting in advanced audio section
+<li>Added reject anonymous caller option in advanced audio section
+<li>Added separate night volume control for audio ringtone
+<li>Added VLC muting support before starting an audio call
+<li>Added dial-plan setting to auto-select account of outgoing calls
+<li>Added TLS verify_server global setting
+<li>Show hint about using the keyboard for entering DTMF
+<li>Restore iTunes volume smoother
+<li>Automatically reload system Address Book when changed
+<li>Use selected contact for add contact button in search results
+<li>Fixed visual feedback when dragging contacts and sessions on top of contacts
+<li>Fixed setting custom ringtone per account
+<li>Fixed crash when Address Book was expanded at start
+<li>Fixed logging of MWI notifications
+<li>Fixed display of matched contacts
+<li>Fixed handling calling to tel: uris
+<li>Log the used audio devices before each call
+<li>Use an alternative SIP route only if timeout was local
+<li>Use system wide user set Downloads directory
+<li>Improved DNS lookup logging
+<li>Optimized display of some widgets in MacOSX Lion
+<li>Make the application sandbox ready
+<li>Several bug fixes in SIP SIMPLE Client SDK
+<li>Switched to Python 2.6
+</ul>
+
+
+<h2>Version 1.4.0</h2>
+
+<p>October 31st, 2011
+
+<ul>
+<li>Added Screenshot sharing based on mouse selected area
+<li>Added per account alert_url, opens custom web page with incoming caller info
+<li>Added Stop and Cancel actions for Screen Sharing requests
+<li>Added registration status to preference panel
+<li>Added support for Bonjour multiparty conferencing
+<li>Added failover to next available hop for new sessions
+<li>Stop ringing imediatelly when cancelling a new stream proposal
+<li>Improved Chat Window and Audio Session contextual menus
+<li>Improved resilience against network connectivity failures
+<li>Improved session and call transfer logging
+<li>Fixed validation of participant URI when inviting to a conference
+<li>Fixed SMS with unicode characters in the body
+<li>Fixed initializing SessionController for outgoing transfers
+<li>Fixed incoming Call Transfer when using a Bonjour account
+<li>Fixed adding participants to a conference with URI in unicode
+<li>Fixed crash in contacts syncronization caused by a multi-threading issue
+<li>Fixed random high CPU load caused by same cause as above
+<li>Fixed updating connect button when chat stream ended
+<li>Fixed exceptions when updating audio status
+<li>Fixed pause/resume iTunes in some cases
+<li>Show display name of incoming caller in log
+<li>Fixed call transfer when rejected multiple times
+<li>Various bug fixes in SIP SIMPLE Client SDK
+</ul>
+
+
+<h2>Version 1.3.0</h2>
+
+<p>September 19th, 2011
+
+<ul>
+<li>Added Speakerphone functionality with Acoustic Echo Cancellation
+<li>Added Noise Suppression for fans and other undesirable noises
+<li>Added Screen Sharing using built-in MacOSX VNC viewer and server
+<li>Added Window Screenshot Sharing to Chat window
+<li>Added Session Information Panel
+<li>Added the Favorites group
+<li>Added logging for call transfers
+<li>Added web_password setting for web server authentication
+<li>Added file logging section and help in Preferences
+<li>Added automatic weekly contacts backup
+<li>Added aggregated transfer speed for File Transfers
+<li>Show network transfer rates in bits/s
+<li>Fixed import of contacts from previous Blink versions
+<li>Fixed selecting as default a newly added SIP account
+<li>Fixed the matching contact bug in last calls groups
+<li>Fixed setting initial group when click on add contact button
+<li>Fixed Bonjour target uri for File Transfers
+<li>Fixed one of the random crash bugs in core media
+<li>Fixed saving the icon when adding a new contact
+<li>Fixed draging the contact search results
+<li>Check if a group can be deleted
+<li>Changed default Downloads folder to ~/Downloads
+<li>Improved render speed when displaying many history entries
+<li>Improved Enrollment window elements description
+<li>Rename Chat Reconnect button to Connect
+<li>Wait starting chat session until user types a message
+</ul>
+
+
+<h2>Version 1.2.0</h2>
+
+<p>August 2nd, 2011
+
+<ul>
+<li>Added Call Transfer
+<li>Added XCAP Contact Management (OMA XDM specifications)
+<li>Added backup and restore for the Contacts List
+<li>Added preference option to show or hide Address Book
+<li>Added auto-answer audio call setting for each account
+<li>Added auto-transfer audio call setting for each account
+<li>Added setting for handling new audio devices automatically
+<li>Added setting to enable pausing/resuming of iTunes
+<li>Added keyboard shortcuts for group management
+<li>Added a default TLS certificate for accounts
+<li>Use TLS as the default MSRP transport in Bonjour account
+<li>Improved display of RTP packet loss and latency
+<li>Improved preferences sections and settings description
+<li>Fixed high CPU usage for conferences with many participants
+<li>Fixed enabling of desktop sharing actions
+<li>Fixed memory leaks in history viewer
+<li>Fixed logging when MSRP chat stream ends without actually starting
+<li>Fixed display of TLS icon while connecting session
+<li>Fixed configuration migration with unicode folder name
+<li>Don't imediatelly hide sRTP icon when hangup audio call
+<li>Set sRTP for audio streams optional by default
+<li>Disable chat disconnect and history buttons for bonjour accounts
+<li>Refactored Contact and Group classes of the Contact Model
+<li>Renamed shared conference file table title
+<li>Fixed bug related to Bonjour Account detection
+<li>Replaced the standard VNC viewer
+<li>Added Enable MWI setting
+<li>Many bug fixes in the middleware
+</ul>
+
+<h2>Version 1.1.1</h2>
+
+<p>June 14th, 2011
+
+<ul>
+<li>Disable send private message menu item if participant has no active chat media
+<li>Improved alignment of SIP settings page elements
+<li>Scroll chatview to bottom when move splitter
+<li>Auto-append domain to entered text in search list results
+<li>Updated preferences panel descriptions
+<li>Replaced Add to conference button in search with a dragable contact
+<li>Make minimum chat drawer width same as audio sessions drawer
+<li>Play alert tone when remote conference added audio
+<li>Improved DNS lookup logging
+<li>Translate TLS connection error more user friendly
+</ul>
+
+<h2>Version 1.1.0</h2>
+
+<p>June 8th, 2011
+
+<ul>
+<li>Added OSX Lion Support
+<li>Added new Preferences Panel
+<li>Added Collaborative Text Editor for Chat sessions
+<li>Added File Transfer support for Multiparty Conferences
+<li>Added feature to open a HTTP URL on incoming sessions
+<li>Added Command Z shortcut key for zoom/unzoom the UI
+<li>Added Command A shortcut key for select all search text
+<li>Added telephone dialpad with Command D shortkey
+<li>Added print capability to Chat, SMS and History windows
+<li>Added incoming file transfer preview in Chat window
+<li>Added conference information to Audio Sessions drawer
+<li>Added incoming file transfer preview in chat window
+<li>Added support for MSRP ACM (RFC 6135)
+<li>Added dragging of contacts from search view to conference
+<li>Refactored logging to be more consistent
+<li>Check if a session still exists when canceling a proposal
+<li>Fixed SMS viewer after latest chat controller changes
+<li>Improved display of failure reason in chat view
+<li>Update own icon in participants drawer
+<li>Protect against dragging contact to a finished session
+<li>Fixed some memory leaks in the middleware
+<li>Fixed drag-and-drop operations with files on Chat window
+<li>Fixed saving custom announcement for answering machine
+<li>Fixed migration from Blink Lite if installed after Blink Pro
+<li>Fixed concurent access issues to the history database
+</ul>
+
+<h2>Version 1.0.9</h2>
+
+<p>April 28th, 2011
+
+<ul>
+<li>Fixed creation of history tables at first start
+<li>Added setting to disable Chat sessions
+<li>Added setting to disable File Transfer
+<li>Added setting to disable Desktop Sharing
+<li>End session if remote party removed all streams
+<li>Fixed validating TLS option paths on preferences
+<li>Migrate configuration from Blink Lite to Pro, if present
+<li>Fixed TLS loading path if its relative
+<li>Print origin of session failure in chat window
+<li>Fixed cancel outgoing chat sessions
+<li>Reduced size of Blink dependencies
+<li>Improved interoperability with OnSIP service
+<li>Fixed representation of URIs with special characters
+</ul>
+
+<h2>Version 1.0.8</h2>
+
+<p>April 6th, 2011
+
+<ul>
+<li>Fixed history entry when session was ended before it was started
+<li>Render failure_reason in chat window if reason is None
+<li>Compact SDP by removing all SDP attributes when removing a stream
+<li>Added format list validation for MSRP streams
+<li>Improved session failure notifications and response codes
+<li>Fixed contextual menu when no real contact was clicked
+<li>Removed per contact subscribe to presence and dialog attributes
+</ul>
+
+<h2>Version 1.0.7</h2>
+
+<p>March 24th, 2011
+
+<ul>
+<li>Fixed a memory allocation error in chat sessions
+</ul>
+
+<h2>Version 1.0.6</h2>
+
+<p>March 14th, 2011
+
+<ul>
+<li>Implemented conference add/remove participants (RFC4579)
+<li>Added conference configuration management
+<li>Enable audio when start conference by default
+<li>Added hold icon in the participants drawer
+<li>Group conference history menu entries in one section
+<li>Auto-append domain when dragging phone numbers into conference
+<li>Removed failed invitations from drawer after 5s delay
+<li>Display subject header in alert panel if present in session
+<li>Create a random conference room if none provided
+<li>Fixed URL quoting not to process percent symbol
+<li>Replaced file storage of call history with a SQLite backend
+<li>Show selected combined audio device in Device menu
+<li>Fixed detaching tab from chat window
+<li>Print proposal failures in chat view
+</ul>
+
+<h2>Version 1.0.5</h2>
+
+<p>March 4th, 2011
+
+<ul>
+<li>Fixed crashes and increased resilience when connectivity is lost
+<li>Set remote focus on incoming session, if applicable
+<li>Fixed exception when processing conference payload with Bonjour account
+<li>Fixed tooltip text in history viewer
+<li>Improved History Viewer layout
+<li>Fixed iTunes pause notification bug
+<li>Allow for lowercase conference rooms
+</ul>
+
+<h2>Version 1.0.4</h2>
+
+<p>February 27th, 2011
+
+<ul>
+<li>Added quick audio device switching
+<li>Fixed manual resizing limits of main window
+<li>Raise incoming session alert panel without taking the focus
+<li>Added dot to the pstn number matching pattern
+<li>Render video file received using file transfer in chat window
+<li>Fixed alignment and improved labels in history viewer toolbar
+<li>Allow two characters long conference rooms
+<li>Improved the History Viewer interface
+<li>Added audio recordings to history viewer
+<li>Added filter by date to history viewer
+<li>Add entries in history for all audio sessions
+<li>Added search by contact in history viewer
+<li>Added begin/end pagination to history viewer
+<li>Improved handling of events during connectivity loss
+</ul>
+
+
+<h2>Version 1.0.3</h2>
+
+<p>February 15th, 2011
+
+<ul>
+<li>Use Cmd-J for join conference and Cmd-S for Silent
+<li>Moved Voicemail items from History to Call menu
+<li>Filter contacts by search text in History viewer
+<li>Filter contacts by media type in History viewer
+<li>Allow add contact from search results to Join Conference window
+<li>Fixed display of history entries matching Address Book entries
+<li>Fixed broken query in History viewer
+<li>Renamed menu Audio to Devices and Conference to Call
+<li>Added Command N short-key for add contact action
+<li>Fixed a memory leak in Chat contoller
+<li>Reduced number of previous chat messages fetched from History
+<li>Added Unicode support for Audio devices
+</ul>
+
+
+<h2>Version 1.0.2</h2>
+
+<p>February 10th, 2011
+
+<ul>
+<li>Added Unicode support for File Locations and Preferences panel
+<li>Improved Chat sessions shutdown logic on multiple window close
+<li>Do not close drawer on window close to avoid transition artifacts
+<li>Fixed exception when the session is ended on error conditions
+<li>Removed Chat history folder setting replaced by the SQLite backend
+<li>Render the Display Name in Chat Growl notifications
+<li>Fixed grouping history entries by account
+<li>Removed Command-A shortcut-key
+<li>Bug fixes in History viewer
+</ul>
+
+<h2>Version 1.0.1</h2>
+
+<p>February 4th, 2011
+
+<ul>
+<li>Added support for conference servers
+<li>Added unicode support for non-ascii Display names
+<li>Added Chat window drawer for conference information
+<li>Added MSRP keepalive mechanism for Chat session
+<li>Refactored History Viewer for using SQLite backend
+<li>Improved DNS resolver capabilities
+<li>Improved Chat and SMS interfaces
+<li>Improved File Transfer interface
+<li>Improved Bonjour discovery mechanism
+<li>Fixed crash when broken Request URI contains unquoted @
+<li>Show full name for some Growl notifications
+<li>Fixed exceptions when adding and removing streams
+<li>Fixed accounting of failed sessions
+<li>Fixed bugs in Answering machine
+<li>Fixed display of RTP packet loss information
+<li>Moved Answering Machine to Status menu
+<li>Moved Audio Recording to History menu
+</ul>
+
+<h2>Version 1.0.0</h2>
+
+<p>November 10th, 2010
+
+<ul>
+<li>Initial release
+</ul>
+
+
+
+</body>
+</html>
