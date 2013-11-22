@@ -13,3 +13,14 @@ Please refer to http://icanblink.com/ if you are looking for the version maintai
 by the original author(s).
 
 
+### Compiling from source
+
+There are quite a lot of dependencies if you are to compile Blink from source.
+I have bundled them for OSX 10.9 Intel (x64) which can be downloaded from
+(here)[http://packages.geniusse.com/osx/10.9/blink/blink-deps-macosx-10.9-intel-x64.tar.bz].
+Extract the tar and put the contents inside the Blink source directory so you
+have `$(SRCROOT)/Distribution/Frameworks` and `$(SRCROOT)/Distribution/Resources`.
+
+Once you have the dependencies extracted, you should be able to compile and run
+without any issues (fingers crossed).
+
