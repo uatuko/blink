@@ -321,6 +321,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AD7C2111183F46CA00248FB1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D1107310486CEB800E47090 /* Info.plist */; };
 		AD8FE7CE183F160A00216378 /* libgcrypt.11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F69E8E317F5611800B98B1E /* libgcrypt.11.dylib */; };
 		AD8FE7CF183F160D00216378 /* libgnutls-extra.26.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F69E8E417F5611800B98B1E /* libgnutls-extra.26.dylib */; };
 		AD8FE7D0183F161000216378 /* libgnutls.26.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F69E8E517F5611800B98B1E /* libgnutls.26.dylib */; };
@@ -657,7 +658,6 @@
 		1F8A762F138A982E007E84C0 /* mute-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mute-white.png"; path = "icons/mute-white.png"; sourceTree = "<group>"; };
 		1F8AD21E1387E18B009DF787 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		1F8BA97914B083D20037F11F /* BlinkLite.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlinkLite.entitlements; sourceTree = "<group>"; };
-		1F8DC9111351D7460034815C /* Info-lite.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-lite.plist"; sourceTree = "<group>"; };
 		1F9268F414868A82006F2FD8 /* EMKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMKeychainItem.h; path = keychain/EMKeychainItem.h; sourceTree = "<group>"; };
 		1F9268F514868A82006F2FD8 /* EMKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMKeychainItem.m; path = keychain/EMKeychainItem.m; sourceTree = "<group>"; };
 		1F9406BE14307D180053D741 /* display_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = display_16.png; path = icons/display_16.png; sourceTree = "<group>"; };
@@ -716,7 +716,6 @@
 		1FCF119A1390EE08001D1CAF /* logs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logs.png; path = icons/logs.png; sourceTree = "<group>"; };
 		1FCF11EE13910878001D1CAF /* audio-preferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "audio-preferences.png"; path = "icons/audio-preferences.png"; sourceTree = "<group>"; };
 		1FCF129E1391151A001D1CAF /* answering_machine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = answering_machine.png; path = icons/answering_machine.png; sourceTree = "<group>"; };
-		1FCF160812B5639F00F71BE5 /* Info-pro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-pro.plist"; sourceTree = "<group>"; };
 		1FCF1D1E12B57D1400F71BE5 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = Distribution/Resources/lib; sourceTree = "<group>"; };
 		1FD0F0A915C9537400D2EE39 /* pending_watcher.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = pending_watcher.tiff; path = icons/pending_watcher.tiff; sourceTree = "<group>"; };
 		1FD2EF8F1439CCA900DFBB2A /* ConferenceScreenSharing.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ConferenceScreenSharing.py; sourceTree = "<group>"; };
@@ -1184,8 +1183,6 @@
 				2B24517D0FCF8AA30023DBFB /* Icons */,
 				DE3A672E13A8A987006EEB0F /* TLS */,
 				8D1107310486CEB800E47090 /* Info.plist */,
-				1F8DC9111351D7460034815C /* Info-lite.plist */,
-				1FCF160812B5639F00F71BE5 /* Info-pro.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
@@ -1725,6 +1722,7 @@
 				2B6328850FE422AE00446655 /* ChatController.py in Resources */,
 				2B11AA580FF323A1007FC176 /* pause.png in Resources */,
 				2B11B0B30FF55C52007FC176 /* BlinkLogger.py in Resources */,
+				AD7C2111183F46CA00248FB1 /* Info.plist in Resources */,
 				2B11B1220FF6B0B3007FC176 /* mute.png in Resources */,
 				2B11B1CF0FF735FB007FC176 /* paused.png in Resources */,
 				2B5DE5200FFC5D0500701821 /* PreferencesController.py in Resources */,
