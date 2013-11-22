@@ -2527,7 +2527,7 @@
 					"$(SRCROOT)/Distribution/Frameworks",
 					"$(SRCROOT)/Distribution/Frameworks/Python.framework/Versions/2.7/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_CFLAGS[arch=*]" = "-IDistribution/Frameworks/Python.framework/Headers";
 				PRODUCT_NAME = Blink;
@@ -2563,7 +2563,7 @@
 					"$(SRCROOT)/Distribution/Frameworks",
 					"$(SRCROOT)/Distribution/Frameworks/Python.framework/Versions/2.7/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_CFLAGS[arch=*]" = "-IDistribution/Frameworks/Python.framework/Headers";
 				PRODUCT_NAME = Blink;
