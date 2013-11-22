@@ -17,7 +17,6 @@
 		1F17C25E137335D700DF4724 /* silence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1F17C25D137335D700DF4724 /* silence.wav */; };
 		1F17D30B17F97E0D00CB74EC /* database-remote-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F17D30A17F97E0D00CB74EC /* database-remote-off.png */; };
 		1F17D31117F9825D00CB74EC /* database-local-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F17D30F17F9825D00CB74EC /* database-local-off.png */; };
-		1F17D31517F9825D00CB74EC /* database-remote-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F17D31017F9825D00CB74EC /* database-remote-off.png */; };
 		1F1DCC8613182ADF004DB88B /* end_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DCC8513182ADF004DB88B /* end_arrow.png */; };
 		1F1DCC8C13182C69004DB88B /* begin_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DCC8B13182C69004DB88B /* begin_arrow.png */; };
 		1F1E6DCD12D07FF1003C63FB /* hangup_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E6DCC12D07FF1003C63FB /* hangup_small.png */; };
@@ -171,7 +170,6 @@
 		1FF32B7017ED0D8900E63A20 /* zrtp-security-failed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FB22A0A140308950024F921 /* zrtp-security-failed.wav */; };
 		1FF32B7217ED0DA400E63A20 /* blink-gold.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1F94DEA8168B758D00168FBA /* blink-gold.icns */; };
 		1FF32B7617ED0DAD00E63A20 /* blink-crypto.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1F0E260C1402F097004AED9C /* blink-crypto.icns */; };
-		1FF32B7C17ED0DE200E63A20 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D1107310486CEB800E47090 /* Info.plist */; };
 		1FF3737017C9E656007418EB /* ChatOTR.py in Resources */ = {isa = PBXBuildFile; fileRef = 1FF3736F17C9E656007418EB /* ChatOTR.py */; };
 		1FF5936C110F07C70047E2CD /* unavailable_message.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FF5936B110F07C70047E2CD /* unavailable_message.wav */; };
 		1FF62303140E20C000E81891 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FF622FF140E20C000E81891 /* help.png */; };
@@ -1676,7 +1674,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Blink" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1955,11 +1953,9 @@
 				1FF32B7017ED0D8900E63A20 /* zrtp-security-failed.wav in Resources */,
 				1FF32B7217ED0DA400E63A20 /* blink-gold.icns in Resources */,
 				1FF32B7617ED0DAD00E63A20 /* blink-crypto.icns in Resources */,
-				1FF32B7C17ED0DE200E63A20 /* Info.plist in Resources */,
 				1FB9BB4117F8117500D7FFA8 /* database-on.png in Resources */,
 				1F17D30B17F97E0D00CB74EC /* database-remote-off.png in Resources */,
 				1F17D31117F9825D00CB74EC /* database-local-off.png in Resources */,
-				1F17D31517F9825D00CB74EC /* database-remote-off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2509,7 +2505,6 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -2538,7 +2533,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_CFLAGS[arch=*]" = "-IDistribution/Frameworks/Python.framework/Headers";
 				PRODUCT_NAME = Blink;
-				PROVISIONING_PROFILE = "6F8C9F49-F54A-496E-816A-5D956A923B6A";
 				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
@@ -2549,7 +2543,6 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2576,7 +2569,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_CFLAGS[arch=*]" = "-IDistribution/Frameworks/Python.framework/Headers";
 				PRODUCT_NAME = Blink;
-				PROVISIONING_PROFILE = "6F8C9F49-F54A-496E-816A-5D956A923B6A";
 				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
@@ -2586,7 +2578,6 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				COPY_PHASE_STRIP = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -2600,7 +2591,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				COPY_PHASE_STRIP = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
